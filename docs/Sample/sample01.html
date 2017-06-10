@@ -1,0 +1,43 @@
+<html style="height: 100%;">
+<head>
+  <title>EffekseerForWebGL with Grimoire.js</title>
+  <script src="grimoire-preset-basic.min.js"></script>
+  <script src="effekseer.min.js"></script>
+  <script src="grimoirejs-effekseer.js"></script>
+  <script src="sample01.js"></script>
+</head>
+
+<body style="height: 100%;">
+  <script type="text/goml" id="canvas1" x-rootnodeid="l0ps3y9avv">
+    <goml width="fit" height="fit" bgColor="gray">
+      <renderer camera="camera">
+        <render-scene/>
+        <render-effekseer/>
+      </renderer>
+      <import-material typeName="lambert" src="lambert.txt" />
+      <material id="red"   type="lambert" color="#f00" sun="n(1,-1.1,-10)" />
+      <material id="green" type="lambert" color="#0f0" sun="n(1,-1.1,-10)" />
+      <material id="blue"  type="lambert" color="#00f" sun="n(1,-1.1,-10)" />
+      <scene>
+	<camera>
+	  <camera.components>
+	    <MouseCameraControl/>
+	  </camera.components>
+	</camera>
+        <rotated-mesh material="#blue" position="-3,0,0" geometry="cube"/>
+        <rotated-mesh material="#red" position="0,3,0" geometry="cube" speed="2"/>
+        <rotated-mesh material="#green" position="3,0,0" geometry="cube" speed="3"/>
+        <efk src="Resource/001_magma_effect/aqua.efk" scale="1,1,1"/>
+      </scene>
+    </goml>
+  </script>
+
+<div class="gr-container" style="position: relative; overflow: hidden; width: 1331px; height: 276px;">
+  <canvas width="1331" height="276" style="position: absolute; top: 0px; left: 0px;" class="gr-resource-loaded-canvas" />
+</div>
+
+
+
+</body>
+
+</html>
