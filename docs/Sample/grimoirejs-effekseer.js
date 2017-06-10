@@ -53,4 +53,4 @@ gr.registerComponent("EffekseerEmitter",{
     }
   },
 });
-gr.registerNode("efk",["EffekseerEmitter"],{},"mesh");
+gr.registerNode("efk",["EffekseerEmitter"],{},"object");
